@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    <section class="all">
+    <div class="container">
+        <div class="row">
+            <div class=" crud text-white">
+                <label for="name" class="my-2">Product Name</label>
+                <input type="text" id="name" placeholder="Product name" class="form-control my-2" >
+
+                <div class="price d-flex">
+
+                <input oninput="total()" type="number" id="price" placeholder="price" class="form-control ">
+                <input oninput="total()" type="number" id="taxes" placeholder="taxes" class="form-control">
+                <input oninput="total()" type="number" id="ads" placeholder="ads" class="form-control">
+                <input on oninput="total()" type="number" id="discount" placeholder="discount" class="form-control">
+                <span id="total" class="total rounded-1 bg-danger"></span>
+
+                </div>
+
+                <label for="count" class="my-2">Product Count</label>
+                <input type="number" id="count" placeholder="Product count" class="form-control mb-1" >
+               
+                <label for="category" class="my-2">Product Category</label>
+                <input type="text" id="category" placeholder="Product category" class="form-control mb-1" >
+
+                <button type="submit" class="btn btn-danger w-100 mt-2 d-block" id="create" onclick="createProduct()">Create</button>
+                <button type="submit" class="btn btn-warning w-100 mt-2 d-none" id="update" onclick="Update()">Update</button>
+
+                <label for="search" class="my-2">Search Products</label>
+                <input type="text" id="search" oninput="searchPro(this.value)" placeholder="search" class="form-control mb-1" >
+
+                <div class="search-buttons d-flex flex-wrap justify-content-between my-3">
+                    <button class="btn btn-danger" id="searchcat" onclick="searchMood(this.id)" >Search by Category</button>
+                    <button class="btn btn-danger" id="searchname" onclick="searchMood(this.id)">Search by Name</button>
+                </div>
+                </div>
+                <div class=" show">
+                <table class="table-dark table">
+                    <thead class=" text-uppercase">
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>count</th>
+                        <th>category</th>
+                        <th>Update</th>
+                        <th>Delete</th> 
+                    </thead>
+                    <tbody id="content" class=" text-capitalize">
+                        <!-- <tr><td colspan="11" class=" text-danger fs-1 fw-bolder d-none" id="nodata">No Data Matched</td></tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>

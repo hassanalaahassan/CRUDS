@@ -1,0 +1,91 @@
+
+.all{
+    background-color: #222;
+    height: 300vh;
+}
+.price input{
+    width: 20%;
+    height: 2.5rem;
+}
+.price span{
+    padding: 5px 3px;
+}
+.price span::before{
+    content: "total:";
+    
+}
+#taxes , #ads , #discount , #total{
+    margin-left: 7px;
+}
+tr{
+    text-align: center;
+}
+.search-buttons button{
+    width: 49%;
+}
+#searchname{
+    margin-left:4px ;
+
+}
+.show,.crud{
+    margin: 0 auto;
+}
+@media screen and (max-width:1200px){
+
+    .table>:not(caption)>*>*,th{
+        
+        font-size: 10px; 
+
+    }
+}
+@media screen and (max-width : 840px){
+
+    .table>:not(caption)>*>*,th{
+        
+        font-size: 8px; 
+        
+    }
+    .price{
+        flex-wrap: wrap;
+
+    }
+    #taxes , #ads , #discount , #total{
+        margin-left: 0;
+        
+    }
+
+    .price input{
+        width: 100%;
+        margin: 7px 0px;
+    }
+    .search-buttons button{
+        width: 100%;
+        margin: 7px 0px;
+    }
+    #searchname{
+        margin-left:0px ;
+    
+    }
+    .show,.crud{
+        margin: 0;
+    }
+    
+}
+@media screen and (max-width:1200px){
+
+    .table>:not(caption)>*>*,th{
+        
+        font-size: 10px; 
+
+    }
+}
+@media screen and (max-width : 472px){
+
+    .table>:not(caption)>*>*,th{
+        
+        font-size: 5px; 
+        
+    }
+  
+    
+}
